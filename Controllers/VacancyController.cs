@@ -9,80 +9,46 @@ namespace RecruterWebApp.Controllers
     [Route("/api/controller")]
     public class VacancyController : Controller
     {
-
-        // GET: VacancyController
-        public ActionResult Index()
+        private readonly VacancyService _vacancyService;
+        public VacancyController(VacancyService vacancyService)
         {
-            return View();
+            _vacancyService = vacancyService;
+        }
+        // GET: VacancyController
+        [HttpGet]
+        public async Task<List<Vacancy>> Index()
+        {
+            return await _vacancyService.GetAllAsync();
         }
 
         // GET: VacancyController/Details/5
-        public ActionResult Details(int id)
+        public async Task<Vacancy?> Details(string id)
         {
-            return View();
-        }
-
-        // GET: VacancyController/Create
-        public ActionResult Create()
-        {
-            return View();
+            return await _vacancyService.GetVacancyAsync(id);
         }
 
         // POST: VacancyController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+       public async Task Create(Vacancy newVacancy)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            await _vacancyService.CreateVacancyAsync(newVacancy);
         }
 
-        // GET: VacancyController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: VacancyController/Edit/5
-        [HttpPost]
+        // PUT: VacancyController/Edit/5
+        [HttpPut]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task Edit(string id, Vacancy vacancy)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            await _vacancyService.UpdateVacancyDataAsync(id,vacancy);
         }
 
-        // GET: VacancyController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: VacancyController/Delete/5
-        [HttpPost]
+        // DELETE: VacancyController/Delete/5
+        [HttpDelete]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task Delete(string id)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            await _vacancyService.DeleteVacancyAsync(id);
         }
     }
 }

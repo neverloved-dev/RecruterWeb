@@ -7,7 +7,7 @@ namespace RecruterWebApp.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public int Id { get; set; }
+        public string Id { get; set; }
         [BsonElement("Title")]
         public string Title { get; set; }
         public string Text { get; set; }
