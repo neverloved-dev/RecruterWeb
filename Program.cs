@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("MongoDB"));
 builder.Services.AddSingleton<VacancyService>();
+builder.Services.AddSingleton<RecruterService>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -11,6 +11,10 @@ namespace RecruterWebApp.Models
         [BsonElement("Title")]
         public string Title { get; set; }
         public string Text { get; set; }
+
+         [BsonElement("Posted by")]
+        public string RecruterId {get;set;}
+        public virtual Recruter Recruter {get;set;}
        
     }
 }
