@@ -12,7 +12,31 @@ namespace RecruterWebApp.Services
         {
             MongoClient mongoClient = new MongoClient(databaseSettings.Value.ConnectionURI);
             IMongoDatabase db = mongoClient.GetDatabase(databaseSettings.Value.DatabaseName);
-            _recruterCollection = db.GetCollection<Recruter>(databaseSettings.Value.CollectionName);
+            _recruterCollection = db.GetCollection<Recruter>("Recruter");
         }
+
+          public async Task<List<Recruter>>GetAllAsync()
+        {
+            return await _RecruterCollection.Find(_=>true).ToListAsync();
+        }
+        public async Task<Recruter?>GetRecruterAsync(string id)
+        {
+            return await _RecruterCollection.Find(x=>x.Id == id).FirstOrDefaultAsync();
+        }
+
+        public async Task CreateRecruterAsync(Recruter Recruter)
+        {
+            await _RecruterCollection.InsertOneAsync(Recruter);
+        }
+        public async Task UpdateRecruterDataAsync(string id, Recruter Recruter)
+        {
+            await _RecruterCollection.ReplaceOneAsync(x=>x.Id == id,Recruter);
+        }
+
+        public async Task DeleteRecruterAsync(string id)
+        {
+            await _RecruterCollection.DeleteOneAsync(x=>x.Id == id);
+        }
+    }
     }
 }
