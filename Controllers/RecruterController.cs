@@ -22,6 +22,7 @@ namespace RecruterWebApp.Controllers
         }
 
         // GET: RecruterController/Details/5
+        [HttpGet("{id}")]
         public async Task<Recruter?> Details(string id)
         {
             return await _RecruterService.GetRecruterAsync(id);

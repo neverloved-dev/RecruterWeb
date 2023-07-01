@@ -17,26 +17,25 @@ namespace RecruterWebApp.Services
 
           public async Task<List<Recruter>>GetAllAsync()
         {
-            return await _RecruterCollection.Find(_=>true).ToListAsync();
+            return await _recruterCollection.Find(_=>true).ToListAsync();
         }
         public async Task<Recruter?>GetRecruterAsync(string id)
         {
-            return await _RecruterCollection.Find(x=>x.Id == id).FirstOrDefaultAsync();
+            return await _recruterCollection.Find(x=>x.Id == id).FirstOrDefaultAsync();
         }
 
         public async Task CreateRecruterAsync(Recruter Recruter)
         {
-            await _RecruterCollection.InsertOneAsync(Recruter);
+            await _recruterCollection.InsertOneAsync(Recruter);
         }
         public async Task UpdateRecruterDataAsync(string id, Recruter Recruter)
         {
-            await _RecruterCollection.ReplaceOneAsync(x=>x.Id == id,Recruter);
+            await _recruterCollection.ReplaceOneAsync(x=>x.Id == id,Recruter);
         }
 
         public async Task DeleteRecruterAsync(string id)
         {
-            await _RecruterCollection.DeleteOneAsync(x=>x.Id == id);
+            await _recruterCollection.DeleteOneAsync(x=>x.Id == id);
         }
-    }
     }
 }

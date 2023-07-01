@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\youngbalto\\Desktop\\Diplom\\RecruterWeb\\RecruterWebApp.csproj": {}
+    "C:\\Users\\youngbalto\\Desktop\\Diplom\\RecruterWeb\\RecruterWebApp.csproj": {}
   },
   "projects": {
-    "c:\\Users\\youngbalto\\Desktop\\Diplom\\RecruterWeb\\RecruterWebApp.csproj": {
+    "C:\\Users\\youngbalto\\Desktop\\Diplom\\RecruterWeb\\RecruterWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\youngbalto\\Desktop\\Diplom\\RecruterWeb\\RecruterWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\youngbalto\\Desktop\\Diplom\\RecruterWeb\\RecruterWebApp.csproj",
         "projectName": "RecruterWebApp",
-        "projectPath": "c:\\Users\\youngbalto\\Desktop\\Diplom\\RecruterWeb\\RecruterWebApp.csproj",
+        "projectPath": "C:\\Users\\youngbalto\\Desktop\\Diplom\\RecruterWeb\\RecruterWebApp.csproj",
         "packagesPath": "C:\\Users\\youngbalto\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\youngbalto\\Desktop\\Diplom\\RecruterWeb\\obj\\",
+        "outputPath": "C:\\Users\\youngbalto\\Desktop\\Diplom\\RecruterWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
