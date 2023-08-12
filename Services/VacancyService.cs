@@ -5,37 +5,37 @@ using MongoDB.Bson;
 
 namespace RecruterWebApp.Services
 {
-    public class VacancyService
+    public class RecruterService
     {
-        private readonly IMongoCollection<Vacancy> _vacancyCollection;
-        public VacancyService(IOptions<DatabaseSettings> databaseSettings)
+        private readonly IMongoCollection<Recruter> _RecruterCollection;
+        public RecruterService(IOptions<DatabaseSettings> databaseSettings)
         {
             MongoClient mongoClient = new MongoClient(databaseSettings.Value.ConnectionURI);
             IMongoDatabase db = mongoClient.GetDatabase(databaseSettings.Value.DatabaseName);
-            _vacancyCollection = db.GetCollection<Vacancy>(databaseSettings.Value.CollectionName);
+            _RecruterCollection = db.GetCollection<Recruter>(databaseSettings.Value.CollectionName);
         }
 
-        public async Task<List<Vacancy>>GetAllAsync()
+        public async Task<List<Recruter>>GetAllAsync()
         {
-            return await _vacancyCollection.Find(_=>true).ToListAsync();
+            return await _RecruterCollection.Find(_=>true).ToListAsync();
         }
-        public async Task<Vacancy?>GetVacancyAsync(string id)
+        public async Task<Recruter?>GetRecruterAsync(string id)
         {
-            return await _vacancyCollection.Find(x=>x.Id == id).FirstOrDefaultAsync();
-        }
-
-        public async Task CreateVacancyAsync(Vacancy vacancy)
-        {
-            await _vacancyCollection.InsertOneAsync(vacancy);
-        }
-        public async Task UpdateVacancyDataAsync(string id, Vacancy vacancy)
-        {
-            await _vacancyCollection.ReplaceOneAsync(x=>x.Id == id,vacancy);
+            return await _RecruterCollection.Find(x=>x.Id == id).FirstOrDefaultAsync();
         }
 
-        public async Task DeleteVacancyAsync(string id)
+        public async Task CreateRecruterAsync(Recruter Recruter)
         {
-            await _vacancyCollection.DeleteOneAsync(x=>x.Id == id);
+            await _RecruterCollection.InsertOneAsync(Recruter);
+        }
+        public async Task UpdateRecruterDataAsync(string id, Recruter Recruter)
+        {
+            await _RecruterCollection.ReplaceOneAsync(x=>x.Id == id,Recruter);
+        }
+
+        public async Task DeleteRecruterAsync(string id)
+        {
+            await _RecruterCollection.DeleteOneAsync(x=>x.Id == id);
         }
     }
 }

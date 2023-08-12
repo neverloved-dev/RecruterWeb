@@ -12,7 +12,7 @@ namespace RecruterWebApp.Models
         public string FullName{get;set;}
         public string Company {get;set;}
            [BsonElement("Listings")]
-        public ICollection<Vacancy>Vacancies {get;set;}
+        public ICollection<Recruter>Vacancies {get;set;}
     }
     
 }

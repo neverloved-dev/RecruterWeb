@@ -19,7 +19,7 @@ namespace RecruterWebApp.Services
         {
             return await _recruterCollection.Find(_=>true).ToListAsync();
         }
-        public async Task<Recruter?>GetVacancyAsync(string id)
+        public async Task<Recruter?>GetRecruterAsync(string id)
         {
             return await _recruterCollection.Find(x=>x.Id == id).FirstOrDefaultAsync();
         }
@@ -33,7 +33,7 @@ namespace RecruterWebApp.Services
             await _recruterCollection.ReplaceOneAsync(x=>x.Id == id,recruter);
         }
 
-        public async Task DeleteVacancyAsync(string id)
+        public async Task DeleteRecruterAsync(string id)
         {
             await _recruterCollection.DeleteOneAsync(x=>x.Id == id);
         }

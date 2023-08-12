@@ -7,48 +7,48 @@ namespace RecruterWebApp.Controllers
 {
     [Controller]
     [Route("/api/controller")]
-    public class VacancyController : Controller
+    public class RecruterController : Controller
     {
-        private readonly VacancyService _vacancyService;
-        public VacancyController(VacancyService vacancyService)
+        private readonly RecruterService _recruterService;
+        public RecruterController(RecruterService RecruterService)
         {
-            _vacancyService = vacancyService;
+            _recruterService = RecruterService;
         }
-        // GET: VacancyController
+        // GET: RecruterController
         [HttpGet]
-        public async Task<List<Vacancy>> Index()
+        public async Task<List<Recruter>> Index()
         {
-            return await _vacancyService.GetAllAsync();
+            return await _recruterService.GetAllAsync();
         }
 
-        // GET: VacancyController/Details/5
-        public async Task<Vacancy?> Details(string id)
+        // GET: RecruterController/Details/5
+        public async Task<Recruter?> Details(string id)
         {
-            return await _vacancyService.GetVacancyAsync(id);
+            return await _recruterService.GetRecruterAsync(id);
         }
 
-        // POST: VacancyController/Create
+        // POST: RecruterController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-       public async Task Create(Vacancy newVacancy)
+       public async Task Create(Recruter newRecruter)
         {
-            await _vacancyService.CreateVacancyAsync(newVacancy);
+            await _recruterService.CreateRecruterAsync(newRecruter);
         }
 
-        // PUT: VacancyController/Edit/5
+        // PUT: RecruterController/Edit/5
         [HttpPut]
         [ValidateAntiForgeryToken]
-        public async Task Edit(string id, Vacancy vacancy)
+        public async Task Edit(string id, Recruter Recruter)
         {
-            await _vacancyService.UpdateVacancyDataAsync(id,vacancy);
+            await _recruterService.UpdateRecruterDataAsync(id,Recruter);
         }
 
-        // DELETE: VacancyController/Delete/5
+        // DELETE: RecruterController/Delete/5
         [HttpDelete]
         [ValidateAntiForgeryToken]
         public async Task Delete(string id)
         {
-            await _vacancyService.DeleteVacancyAsync(id);
+            await _recruterService.DeleteRecruterAsync(id);
         }
     }
 }

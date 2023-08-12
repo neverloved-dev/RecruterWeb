@@ -3,7 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace RecruterWebApp.Models
 {
-    public class Vacancy
+    public class Recruter
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
