@@ -1,3 +1,7 @@
 ﻿<Project>
+<<<<<<< HEAD
   <Import Project="../build/RecruterWebApp.props" />
+=======
+  <Import Project="..\build\RecruterWebApp.props" />
+>>>>>>> 97a0046edb8f20bf47a72eb792a68c40ac4a1f63
 </Project>

@@ -9,17 +9,9 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RecruterWebApp
 build_property.RootNamespace = RecruterWebApp
-<<<<<<< HEAD
-build_property.ProjectDir = /home/x0nr/Code/
-build_property.RazorLangVersion = 7.0
-build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/x0nr/Code
-=======
 build_property.ProjectDir = C:\Users\youngbalto\Desktop\Diplom\RecruterWeb\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\youngbalto\Desktop\Diplom\RecruterWeb
->>>>>>> 97a0046edb8f20bf47a72eb792a68c40ac4a1f63
 build_property._RazorSourceGeneratorDebug = 

@@ -1,12 +1,23 @@
-namespace RecruterWebApp.Models;
+using System;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
-public class Recruter
+namespace RecruterWebApp.Models
 {
-    public long Id { get; set; }
-    public string FirstName { get; set; }
-    public string MiddleName { get; set; }
-    public string LastName { get; set; }
-    public string Email { get; set; }
-    public string Password { get; set; }
-    
+    public class Recruter
+    {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public long Id { get; set; }
+        [BsonElement("Name")]
+        public string Name { get; set; }
+        public string Email { get; set; }
+        
+        public string PhoneNumber {get;set;}
+
+        public string Agency {get;set;}
+        
+       
+    }
 }
+

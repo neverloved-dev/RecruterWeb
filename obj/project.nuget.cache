@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "0UaW3qAU7Nc2yQcApKiyW1XdxF5IwHnqYi0X4QNPlCKIPwusl9aIsOuh73xWPCyu4ilY/YpQ96jvj07a0u4v9Q==",
   "success": true,
   "projectFilePath": "/home/x0nr/Code/RecruterWebApp.csproj",
+=======
+  "dgSpecHash": "S3YsHB1cmc+peIPN6oPfq64ZvOTanevTIc5RWCbkGX8EBFD5idTtEFb13Ex+525U2WxzC4+V5AdzPIvn34T92g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\youngbalto\\Desktop\\Diplom\\RecruterWeb\\RecruterWebApp.csproj",
+>>>>>>> 97a0046edb8f20bf47a72eb792a68c40ac4a1f63
   "expectedPackageFiles": [
     "/home/x0nr/.nuget/packages/awssdk.core/3.7.100.14/awssdk.core.3.7.100.14.nupkg.sha512",
     "/home/x0nr/.nuget/packages/awssdk.securitytoken/3.7.100.14/awssdk.securitytoken.3.7.100.14.nupkg.sha512",
