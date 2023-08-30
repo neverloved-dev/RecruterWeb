@@ -1209,32 +1209,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\youngbalto\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/x0nr/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\youngbalto\\Desktop\\RecruterWeb\\RecruterWebApp.csproj",
+      "projectUniqueName": "/home/x0nr/Code/RecruterWebApp.csproj",
       "projectName": "RecruterWebApp",
-      "projectPath": "c:\\Users\\youngbalto\\Desktop\\RecruterWeb\\RecruterWebApp.csproj",
-      "packagesPath": "C:\\Users\\youngbalto\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\youngbalto\\Desktop\\RecruterWeb\\obj\\",
+      "projectPath": "/home/x0nr/Code/RecruterWebApp.csproj",
+      "packagesPath": "/home/x0nr/.nuget/packages/",
+      "outputPath": "/home/x0nr/Code/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\youngbalto\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/x0nr/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1285,7 +1277,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
       }
     }
   }
