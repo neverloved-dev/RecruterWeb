@@ -12,7 +12,7 @@ namespace RecruterWebApp.Services
         {
             MongoClient mongoClient = new MongoClient(databaseSettings.Value.ConnectionURI);
             IMongoDatabase db = mongoClient.GetDatabase(databaseSettings.Value.DatabaseName);
-            _vacancyCollection = db.GetCollection<Vacancy>(databaseSettings.Value.CollectionName);
+            _vacancyCollection = db.GetCollection<Vacancy>("Vacancies");
         }
 
         public async Task<List<Vacancy>>GetAllAsync()

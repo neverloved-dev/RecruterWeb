@@ -1,0 +1,7 @@
+﻿<Project>
+<<<<<<< HEAD
+  <Import Project="../buildMultiTargeting/RecruterWebApp.props" />
+=======
+  <Import Project="..\buildMultiTargeting\RecruterWebApp.props" />
+>>>>>>> 97a0046edb8f20bf47a72eb792a68c40ac4a1f63
+</Project>

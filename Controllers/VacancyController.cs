@@ -6,7 +6,7 @@ using RecruterWebApp.Models;
 namespace RecruterWebApp.Controllers
 {
     [Controller]
-    [Route("/api/controller")]
+    [Route("/api/vacancies/controller")]
     public class VacancyController : Controller
     {
         private readonly VacancyService _vacancyService;
@@ -22,6 +22,7 @@ namespace RecruterWebApp.Controllers
         }
 
         // GET: VacancyController/Details/5
+        [HttpGet("{id}")]
         public async Task<Vacancy?> Details(string id)
         {
             return await _vacancyService.GetVacancyAsync(id);
